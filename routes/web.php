@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 
 Route::get('/communities', [\App\Http\Controllers\CommunityController::class, 'index']);
+Route::get('/auctions', [\App\Http\Controllers\AuctionController::class, 'open']);
