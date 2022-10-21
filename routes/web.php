@@ -16,3 +16,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/communities', function () {
+
+    $client = new \GraphQL\Client(
+        'https://prod.backend.prop.house/graphql'
+    );
+
+    $gql = (new \GraphQL\Query('communities'))
+        ->setSelectionSet(
+            [
+                'id',
+                'name',
+                'description'
+            ]
+        );
+
+    $response = $client->runQuery($gql);
+    $data = $response->getData();
+    $communities = $data->communities;
+    return $communities;
+});
