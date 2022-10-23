@@ -18,6 +18,7 @@ Route::get('/', [\App\Http\Controllers\AuctionController::class, 'home']);
 
 Route::get('/communities', [\App\Http\Controllers\CommunityController::class, 'index']);
 Route::get('/auctions', [\App\Http\Controllers\AuctionController::class, 'open']);
+Route::get('/auctions/{auction_id}', [\App\Http\Controllers\AuctionController::class, 'show']);
 
 Route::middleware([
     'auth:sanctum',
