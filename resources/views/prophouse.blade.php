@@ -163,7 +163,11 @@
                                             </div>
                                             <div class="-ml-px flex w-0 flex-1">
                                                 <a href="#" class="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-lg border border-transparent py-4 text-sm font-medium text-gray-700 hover:text-gray-500">
-                                                    <span class="ml-3">Call</span>
+                                                    <span class="ml-3">
+                                                        Funding: <br/>
+                                                        {{$auction->numWinners}} x
+                                                        {{$auction->fundingAmount}}{{$auction->currencyType}}
+                                                    </span>
                                                 </a>
                                             </div>
                                         </div>

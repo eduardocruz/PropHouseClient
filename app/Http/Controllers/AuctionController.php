@@ -78,6 +78,6 @@ class AuctionController extends Controller
         $response = $client->runQuery($gql);
         $data = $response->getData();
         $auctions = collect($data->auctionsByStatus);
-        return view('prophouse', compact('auctions'));
+        return view('prophouse', ['auctions' => $auctions->sortBy('proposalEndTime')]);
     }
 }
