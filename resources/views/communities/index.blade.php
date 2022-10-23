@@ -56,7 +56,9 @@
 
                     <div class="h-0 flex-1 overflow-y-auto pt-5 pb-4">
                         <div class="flex flex-shrink-0 items-center px-4">
-                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+                            <a href="/">
+                                <span class="text-2xl block text-indigo-600 xl:inline">Client ⌐◨-◨</span>
+                            </a>
                         </div>
                         <nav aria-label="Sidebar" class="mt-5">
                             <div class="space-y-1 px-2">
@@ -145,7 +147,9 @@
                 <div class="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-gray-100">
                     <div class="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
                         <div class="flex flex-shrink-0 items-center px-4">
-                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+                            <a href="/">
+                                <span class="text-2xl block text-indigo-600 xl:inline">Client ⌐◨-◨</span>
+                            </a>
                         </div>
                         <nav class="mt-5 flex-1" aria-label="Sidebar">
                             <div class="space-y-1 px-2">
@@ -229,7 +233,9 @@
             <div class="lg:hidden">
                 <div class="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-1.5">
                     <div>
-                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+                        <a href="/">
+                            <span class="text-2xl block text-indigo-600 xl:inline">Client ⌐◨-◨</span>
+                        </a>
                     </div>
                     <div>
                         <button type="button" class="-mr-3 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900">

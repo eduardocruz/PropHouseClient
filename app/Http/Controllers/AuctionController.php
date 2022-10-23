@@ -28,6 +28,14 @@ class AuctionController extends Controller
                     'currencyType',
                     'description',
                     'numWinners',
+                    (new Query('community'))
+                        ->setSelectionSet(
+                            [
+                                'name',
+                                'profileImageUrl',
+                                'description'
+                            ]
+                        )
                 ]
             );
 

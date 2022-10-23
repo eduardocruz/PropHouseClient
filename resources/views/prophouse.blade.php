@@ -36,9 +36,9 @@
                     <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
                         <div class="flex flex-1 items-center md:absolute md:inset-y-0 md:left-0">
                             <div class="flex w-full items-center justify-between md:w-auto">
-                                <a href="#">
-                                    <span class="sr-only">Your Company</span>
-                                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                                <a href="/">
+                                    <span class="sr-only">Prop House Client</span>
+                                    <span class="text-2xl block text-indigo-600 xl:inline">Client ⌐◨-◨</span>
                                 </a>
                                 <div class="-mr-2 flex items-center md:hidden">
                                     <button type="button" class="inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
