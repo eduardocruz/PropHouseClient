@@ -56,7 +56,9 @@
 
                 <div class="h-0 flex-1 overflow-y-auto pt-5 pb-4">
                     <div class="flex flex-shrink-0 items-center px-4">
-                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+                        <a href="/">
+                            <span class="text-2xl block text-indigo-600 xl:inline">Client ⌐◨-◨</span>
+                        </a>
                     </div>
                     <nav aria-label="Sidebar" class="mt-5">
                         <div class="space-y-1 px-2">
@@ -145,7 +147,9 @@
             <div class="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-gray-100">
                 <div class="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
                     <div class="flex flex-shrink-0 items-center px-4">
-                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+                        <a href="/">
+                            <span class="text-2xl block text-indigo-600 xl:inline">Client ⌐◨-◨</span>
+                        </a>
                     </div>
                     <nav class="mt-5 flex-1" aria-label="Sidebar">
                         <div class="space-y-1 px-2">
@@ -160,7 +164,7 @@
                                 Open Auctions
                             </a>
 
-                            
+
                                 <a href="/communities" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
                                 <!--
                                   Heroicon name: outline/home
@@ -231,7 +235,9 @@
         <div class="lg:hidden">
             <div class="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-1.5">
                 <div>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+                    <a href="/">
+                        <span class="text-2xl block text-indigo-600 xl:inline">Client ⌐◨-◨</span>
+                    </a>
                 </div>
                 <div>
                     <button type="button" class="-mr-3 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900">
@@ -249,19 +255,18 @@
                 <!-- Start main area-->
                 <div class="absolute inset-0 py-6 px-4 sm:px-6 lg:px-8">
                     <div class="h-full rounded-lg border-2 border-dashed border-gray-200">
-
+                        <h3>Auctions</h3>
                         <ul role="list" class="divide-y divide-gray-200">
                             @foreach($auctions as $auction)
-
-                                <li class="flex py-4">
-                                    {{--
-                                    <img class="h-10 w-10 rounded-full" src="{{$auction->title}}" alt="">
-                                    --}}
+                                <a href="/auctions/{{$auction->id}}">
+                                <li class="pl-2 pr-4 flex py-4">
+                                    <img class="h-10 w-10 rounded-full pl" src="{{$auction->community->profileImageUrl}}" alt="">
                                     <div class="ml-3">
                                         <p class="text-sm font-medium text-gray-900">{{$auction->title}}</p>
                                         <p class="text-sm text-gray-500">{{$auction->description}}</p>
                                     </div>
                                 </li>
+                                </a>
                             @endforeach
 
                         </ul>
