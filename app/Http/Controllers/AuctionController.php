@@ -128,8 +128,40 @@ class AuctionController extends Controller
 
         $response = $client->runQuery($gql);
         $data = $response->getData();
-        $auctions = collect($data->auctionsByStatus);
-        return view('prophouse', ['auctions' => $auctions->sortBy('proposalEndTime')]);
+        $openAuctions = collect($data->auctionsByStatus);
+
+        $gql = (new \GraphQL\Query('auctionsByStatus'))
+            ->setArguments(['status' => new RawObject('Upcoming')])
+            ->setSelectionSet(
+                [
+                    'id',
+                    'title',
+                    'status',
+                    'startTime',
+                    'proposalEndTime',
+                    'fundingAmount',
+                    'currencyType',
+                    'description',
+                    'numWinners',
+                    (new Query('community'))
+                        ->setSelectionSet(
+                            [
+                                'name',
+                                'profileImageUrl',
+                                'description'
+                            ]
+                        )
+                ]
+            );
+
+        $response = $client->runQuery($gql);
+        $data = $response->getData();
+        $upcomingAuctions = collect($data->auctionsByStatus);
+
+        return view('prophouse', [
+            'openAuctions' => $openAuctions->sortBy('proposalEndTime'),
+            'upcomingAuctions' => $upcomingAuctions->sortBy('proposalEndTime')
+        ]);
     }
 
     public function show($auction_id)
