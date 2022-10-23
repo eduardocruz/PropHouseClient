@@ -253,7 +253,7 @@
                                 <li class="flex py-4 pl-3 pr-4">
                                     <img class="h-10 w-10 rounded-full pl" src="{{$auction->community->profileImageUrl}}" alt="">
                                     <div class="ml-3">
-                                        <p class="text-sm font-medium text-gray-900">{{$proposal->title}}</p>
+                                        <p class="text-2xl font-medium text-gray-900">{{$proposal->title}}</p>
                                         <p class="text-sm text-gray-500">{!! $proposal->what!!}</p>
                                         <p class="text-sm text-gray-500">Created: {{\Carbon\Carbon::parse($proposal->createdDate)->diffForHumans()}}</p>
                                         <p class="text-sm text-gray-500">Votes: {{$proposal->voteCount}}</p>
