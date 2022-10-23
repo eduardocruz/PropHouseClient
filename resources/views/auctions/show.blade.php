@@ -247,14 +247,13 @@
                     <!-- Start main area-->
                     <div class="absolute inset-0 py-6 px-4 sm:px-6 lg:px-8">
                         <div class="h-full rounded-lg border-2 border-dashed border-gray-200">
-
+                            <h2>Proposals</h2>
                             <ul role="list" class="divide-y divide-gray-200">
                                 @foreach($auction->proposals as $proposal)
                                 <li class="flex py-4 pl-3 pr-4">
                                     <img class="h-10 w-10 rounded-full pl" src="{{$auction->community->profileImageUrl}}" alt="">
                                     <div class="ml-3">
-                                        <p class="text-2xl font-medium text-gray-900">{{$proposal->title}}</p>
-                                        <p class="text-sm text-gray-500">{!! $proposal->what!!}</p>
+                                        <p class="text-sm font-medium text-gray-900">{{$proposal->title}}</p>
                                         <p class="text-sm text-gray-500">Created: {{\Carbon\Carbon::parse($proposal->createdDate)->diffForHumans()}}</p>
                                         <p class="text-sm text-gray-500">Votes: {{$proposal->voteCount}}</p>
                                     </div>
@@ -270,7 +269,7 @@
                     <!-- Start secondary column (hidden on smaller screens) -->
                     <div class="absolute inset-0 py-6 px-4 sm:px-6 lg:px-8">
                         <div class="h-full rounded-lg border-2 border-dashed border-gray-200">
-
+                            <h3>Auction</h3>
                             <ul role="list" class="divide-y divide-gray-200">
                                     <li class="flex py-4 pl-3 pr-4">
                                         <img class="h-10 w-10 rounded-full pl" src="{{$auction->community->profileImageUrl}}" alt="">
