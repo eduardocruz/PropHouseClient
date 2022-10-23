@@ -263,7 +263,13 @@
                                     <img class="h-10 w-10 rounded-full pl" src="{{$auction->community->profileImageUrl}}" alt="">
                                     <div class="ml-3">
                                         <p class="text-sm font-medium text-gray-900">{{$auction->title}}</p>
-                                        <p class="text-sm text-gray-500">{{$auction->description}}</p>
+                                        <p class="text-sm text-gray-500">Funding: {{$auction->numWinners}} x {{$auction->fundingAmount}}{{$auction->currencyType}} (Total.: {{$auction->numWinners * $auction->fundingAmount}}{{$auction->currencyType}})</p>
+                                        <p class="text-sm text-gray-500">Proposals: {{count($auction->proposals)}}</p>
+                                        <p class="text-sm text-gray-500">Proposal ratio per winner: {{count($auction->proposals) / $auction->numWinners}} per fund</p>
+                                        <p class="text-sm text-gray-500">Submission deadline: {{\Carbon\Carbon::parse($auction->proposalEndTime)->diffForHumans()}}</p>
+
+                                        <p class="text-sm text-gray-500"><span class="text-sm font-medium text-gray-900">Description: </span>{!! $auction->description !!}
+                                        </p>
                                     </div>
                                 </li>
                                 </a>

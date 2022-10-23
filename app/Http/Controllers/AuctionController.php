@@ -35,6 +35,16 @@ class AuctionController extends Controller
                                 'profileImageUrl',
                                 'description'
                             ]
+                        ),
+                    (new Query('proposals'))
+                        ->setSelectionSet(
+                            [
+                                'id',
+                                'title',
+                                'what',
+                                'voteCount',
+                                'createdDate'
+                            ]
                         )
                 ]
             );
