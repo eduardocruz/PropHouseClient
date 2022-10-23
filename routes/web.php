@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('prophouse');
-});
+Route::get('/', [\App\Http\Controllers\AuctionController::class, 'home']);
 
 
 Route::get('/communities', [\App\Http\Controllers\CommunityController::class, 'index']);
