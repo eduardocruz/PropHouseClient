@@ -20,3 +20,13 @@ Route::get('/', function () {
 
 Route::get('/communities', [\App\Http\Controllers\CommunityController::class, 'index']);
 Route::get('/auctions', [\App\Http\Controllers\AuctionController::class, 'open']);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
