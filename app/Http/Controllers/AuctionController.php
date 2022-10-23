@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use GraphQL\Query;
 use GraphQL\RawObject;
 use Illuminate\Http\Request;
 
@@ -63,6 +64,14 @@ class AuctionController extends Controller
                     'currencyType',
                     'description',
                     'numWinners',
+                    (new Query('community'))
+                        ->setSelectionSet(
+                            [
+                                'name',
+                                'profileImageUrl',
+                                'description'
+                            ]
+                        )
                 ]
             );
 
